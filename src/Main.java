@@ -1,15 +1,25 @@
+import java.io.FileNotFoundException;
+
 public class Main {
+    public static void loginUsers(){
+        // Logging users in
+        Login login = new Login();
 
-    public static void logChef() {
+        try {
+            login.loginChef();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    }
-
-    public static void logWaiter(){
-
+        try {
+            login.loginWaiter();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
-        logChef();
-        logWaiter();
+        loginUsers();
+
     }
 }
