@@ -23,7 +23,7 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement {
     @Override
     public void addToTheMenu(ArrayList<String> menu, String meal, double price) {
         menu.add(meal+ " - " + price);
-        PrintStream printStream = null;
+        PrintStream printStream;
         try {
             printStream = new PrintStream("menu.txt");
         } catch (FileNotFoundException e) {
@@ -36,7 +36,7 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement {
     @Override
     public void removeFromTheMenu(ArrayList<String> menu, int index) {
         menu.remove(index);
-        PrintStream printStream = null;
+        PrintStream printStream;
         try {
             printStream = new PrintStream("menu.txt");
         } catch (FileNotFoundException e) {
