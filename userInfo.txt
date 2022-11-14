@@ -1,2 +1,1 @@
-Chef info: yyy, 6778
-Waiter info: xxx, 34566
+Chef info: f, f

@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Login {
 
-    Login(){
+    Login() {
 
     }
+
     // Create a PrintStream instance
     PrintStream fileWriter;
 
@@ -18,9 +19,10 @@ public class Login {
             e.printStackTrace();
         }
     }
-    Scanner read = new Scanner(System.in);
-    public void loginChef(){
 
+    Scanner read = new Scanner(System.in);
+
+    public void loginChef() {
         System.out.println("Login for chef -");
         // Ask for info
         System.out.print("Enter your name: ");
@@ -30,10 +32,12 @@ public class Login {
 
         // Write info in text file
         fileWriter.println("Chef info: " + userName + ", " + userPassword);
+        fileWriter.close();
 
     }
 
-    public void loginWaiter(){
+    public void loginWaiter() {
+        System.out.println("Login for waiter -");
         // Ask for info
         System.out.print("Enter your name: ");
         String userName = read.next();
@@ -42,9 +46,6 @@ public class Login {
 
         // Write info in text file
         fileWriter.println("Waiter info: " + userName + ", " + userPassword);
-
         fileWriter.close();
     }
-
-
 }
