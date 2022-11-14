@@ -32,7 +32,6 @@ public class Login {
 
         // Write info in text file
         fileWriter.println("Chef info: " + userName + ", " + userPassword);
-        fileWriter.close();
 
     }
 

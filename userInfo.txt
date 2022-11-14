@@ -1,1 +1,2 @@
-Chef info: f, f
+Chef info: gosho, 213
+Waiter info: tosho, 123
