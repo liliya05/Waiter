@@ -26,6 +26,5 @@ public class Main {
         waiter.addToTheMenu(menu, "chicken nuggets", 5.4);
         waiter.addToTheMenu(menu, "apple juice", 1);
         waiter.addToTheMenu(menu, "cheesecake", 3.65);
-        waiter.removeFromTheMenu(menu, 2);
     }
 }

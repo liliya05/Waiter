@@ -1,1 +1,6 @@
-[chicken nuggets - 5.4, apple juice - 1.0]
+1. chicken nuggets, price: 5.4
+1. apple juice, price: 1.0
+1. cheesecake, price: 3.65
+1. chicken nuggets, price: 5.4
+1. apple juice, price: 1.0
+1. cheesecake, price: 3.65
