@@ -1,6 +1,4 @@
 1. chicken nuggets, price: 5.4
-1. apple juice, price: 1.0
-1. cheesecake, price: 3.65
-1. chicken nuggets, price: 5.4
-1. apple juice, price: 1.0
-1. cheesecake, price: 3.65
+2. apple juice, price: 1.0
+3. cheesecake, price: 3.65
+4. cake, price: 6.0
