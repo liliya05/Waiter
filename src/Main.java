@@ -28,6 +28,9 @@ public class Main {
         waiter.addToTheMenu(menu, "cheesecake", 3.65);
         waiter.addToTheMenu(menu, "cake", 6);
 
+        // test
+        System.out.println(menu.toArray().length);
+
         Tables table1 = new Tables();
         Tables table2 = new Tables(2, "free");
         System.out.println(table1.status);

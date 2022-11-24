@@ -1,4 +1,7 @@
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Waiter extends User implements Serveable, Payable, MenuManagement, Orderable {
@@ -7,10 +10,16 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
     @Override
     public void addToTheMenu(ArrayList<String> menu, String meal, double price) {
         menu.add(meal);
+
+        // Check the number of line where the new meal will be added
+        Path path = Paths.get("menu.txt");
         int numberOfMeal = 0;
-        for (String ignored : menu) {
-            numberOfMeal++;
+        try {
+            numberOfMeal = (int) Files.lines(path).count() + 1;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
         // add to menu without overwriting file
         try {
             FileWriter fStream = new FileWriter("menu.txt", true);
@@ -27,7 +36,7 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
     @Override
     public void removeFromTheMenu(ArrayList<String> menu, int numberOfMeal) {
         menu.remove(numberOfMeal-1);
-        //TODO: write changes after removals from the array list in text file
+        //TODO: Remove the meal from the txt file too
     }
 
     @Override
