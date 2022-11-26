@@ -1,13 +1,25 @@
-public class Order {
-    protected String date;
-    protected String time;
-    protected Tables table;
-    protected String meal;
+import java.util.ArrayList;
 
-    Order(String date, String time, Tables table, String meal) {
+public class Order {
+    public String date;
+    public String time;
+    public Tables table;
+    public ArrayList<String> meals;
+
+    Order(String date, String time, Tables table, ArrayList<String> meals) {
         this.date = date;
         this.time = time;
         this.table = table;
-        this.meal = meal;
+        this.meals = meals;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", table=" + table +
+                ", meals=" + meals +
+                '}';
     }
 }

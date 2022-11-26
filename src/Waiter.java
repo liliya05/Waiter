@@ -35,7 +35,7 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
 
     @Override
     public void removeFromTheMenu(ArrayList<String> menu, int numberOfMeal) {
-        menu.remove(numberOfMeal-1);
+        menu.remove(numberOfMeal - 1);
         //TODO: Remove the meal from the txt file too
     }
 
@@ -56,16 +56,26 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
 
     @Override
     public void makeAnOrder(ArrayList<String> menu, Order order) {
-        //TODO: make possible ordering multiple meals and write orders in a text file
-        if (order.table.status.equalsIgnoreCase("free") && menu.contains(order.meal)) {
-            System.out.println("Order for table " + order.table.tableNumber + ": " + order.meal);
-            order.table.status = "waiting for order to be served";
+        //TODO: write orders in a text file
+        for (String s : order.meals) {
+            if (menu.containsAll(order.meals) && order.table.status.equalsIgnoreCase("free")) {
+                System.out.println("Order for table " + order.table.tableNumber + ": " + order.meals);
+                order.table.status = "waiting for order to be served";
+            }
+            else if (!order.table.status.equalsIgnoreCase("free")) {
+                System.out.println("An order was already made.");
+            } else if (!menu.contains(s)) {
+                System.out.println(s + " isn't on the menu.");
+            }
         }
-        else if (!order.table.status.equalsIgnoreCase("free")) {
-            System.out.println("An order was already made.");
-        }
-        else if (!menu.contains(order.meal)) {
-            System.out.println("This meal isn't on the menu.");
+        try {
+            FileWriter fileWriter = new FileWriter("orders.txt", true);
+            BufferedWriter ordersFile = new BufferedWriter(fileWriter);
+            ordersFile.write((order) + "\n");
+            ordersFile.close();
+        } catch (Exception e) {
+            System.out.println("Error while writing to file: " +
+                    e.getMessage());
         }
     }
 
