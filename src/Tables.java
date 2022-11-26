@@ -1,4 +1,4 @@
-public class Tables {
+public class Tables implements CharSequence {
     protected int tableNumber;
     protected String status;
 
@@ -12,6 +12,21 @@ public class Tables {
         this.status = status;
     }
 
+
+    @Override
+    public int length() {
+        return 0;
+    }
+
+    @Override
+    public char charAt(int index) {
+        return 0;
+    }
+
+    @Override
+    public CharSequence subSequence(int start, int end) {
+        return null;
+    }
 
     @Override
     public String toString() {

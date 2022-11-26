@@ -280,3 +280,31 @@
 280. cake, price: 6.0
 281. steak, price: 5.6
 282. soup, price: 4.7
+283. chicken nuggets, price: 5.4
+284. apple juice, price: 1.0
+285. cheesecake, price: 3.65
+286. cake, price: 6.0
+287. chicken nuggets, price: 5.4
+288. apple juice, price: 1.0
+289. cheesecake, price: 3.65
+290. cake, price: 6.0
+291. chicken nuggets, price: 5.4
+292. apple juice, price: 1.0
+293. cheesecake, price: 3.65
+294. cake, price: 6.0
+295. chicken nuggets, price: 5.4
+296. apple juice, price: 1.0
+297. cheesecake, price: 3.65
+298. cake, price: 6.0
+299. chicken nuggets, price: 5.4
+300. apple juice, price: 1.0
+301. cheesecake, price: 3.65
+302. cake, price: 6.0
+303. chicken nuggets, price: 5.4
+304. apple juice, price: 1.0
+305. cheesecake, price: 3.65
+306. cake, price: 6.0
+307. chicken nuggets, price: 5.4
+308. apple juice, price: 1.0
+309. cheesecake, price: 3.65
+310. cake, price: 6.0
