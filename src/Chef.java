@@ -5,13 +5,18 @@ public class Chef extends User implements Preparation {
     }
 
     @Override
-    public void cook() {
-
+    public void cook(Order order) {
+        if (order.status.equalsIgnoreCase("ordered")) {
+            order.status = "cooking";
+            System.out.println();
+        }
     }
 
     @Override
-    public void finishCooking() {
-
+    public void finishCooking(Order order) {
+        if (order.status.equalsIgnoreCase("cooking")) {
+            order.status = "cooked";
+        }
     }
 
     @Override

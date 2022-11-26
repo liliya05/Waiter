@@ -1,3 +1,3 @@
 public interface Serveable {
-    void serveTable();
+    void serveTable(Order order);
 }

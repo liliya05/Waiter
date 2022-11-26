@@ -1,1 +1,1 @@
-Order 1: [awda, adw, ad, awwf] on table - Tables{tableNumber=1, status='free'}. Added on: 22, 22.22.22
+Order 1: [fish] on table 1, status: waiting for order to be served; Added on: 12, 12
