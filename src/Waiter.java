@@ -3,8 +3,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Waiter extends User implements Serveable, Payable, MenuManagement, Orderable {
 
@@ -65,34 +63,31 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        // add to orders file without overwriting file
         try {
-
-            File file = new File("orders.txt");
-
-            try {
-                Scanner scanner = new Scanner(file);
-
-                //now read the file line by line...
-                int lineNum = 0;
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    lineNum++;
-                    if(line.contains(order.table)) {
-                        System.out.println("This table has already made an order!");
-                        return;
-                    }
-                }
-            } catch(FileNotFoundException e) {
-                System.out.println(e);
-            }
-
             FileWriter fStream = new FileWriter("orders.txt", true);
             BufferedWriter menuFile = new BufferedWriter(fStream);
-            menuFile.write("Order " + lines + ": " + order.meals + " on table - " + order.table + ". Added on: "
-                    + order.time + ", " + order.date + "\n");
-            menuFile.close();
+            for (String s : order.meals) {
+                if (menu.containsAll(order.meals) && order.table.status.equalsIgnoreCase("free")) {
+                    System.out.println("Order for table " + order.table.tableNumber + ": " + order.meals);
+                    order.table.status = "waiting for order to be served";
+                    menuFile.write("Order " + lines + ": " + order.meals + " on table - " + order.table + ". Added on: "
+                            + order.time + ", " + order.date + "\n");
+                    menuFile.close();
+                } else if (!order.table.status.equalsIgnoreCase("free")) {
+                    System.out.println("An order was already made.");
+                } else if (!menu.contains(s)) {
+                    System.out.println(s + " isn't on the menu.");
+                }
+            }
+            try {
+                FileWriter fileWriter = new FileWriter("orders.txt", true);
+                BufferedWriter ordersFile = new BufferedWriter(fileWriter);
+                ordersFile.write((order) + "\n");
+                ordersFile.close();
+            } catch (Exception e) {
+                System.out.println("Error while writing to file: " +
+                        e.getMessage());
+            }
         } catch (Exception e) {
             System.err.println("Error while writing to file: " +
                     e.getMessage());
