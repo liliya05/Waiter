@@ -32,12 +32,14 @@ public class Main {
         Tables table1 = new Tables();
         Tables table2 = new Tables(1, "free");
         Tables table3 = new Tables(2, "free");
-        System.out.println("Make an order for table ");
+
+        System.out.print("Make an order for table: ");
         int tableNumber = scan.nextInt();
-        System.out.println("Enter date: ");
+        System.out.print("Enter date: ");
         String date = scan.next();
-        System.out.println("Enter time: ");
+        System.out.print("Enter time: ");
         String time = scan.next();
+
         switch (tableNumber) {
             case 1:
                 System.out.println("Order for table " + table1.tableNumber + ":");

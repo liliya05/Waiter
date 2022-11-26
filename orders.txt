@@ -1,2 +1,1 @@
-Order 1: [cake,  steak, apple juice] on table - Tables{tableNumber=1, status='free'}. Added on: 14:31, 12.11.22
-Order 2: [cake,  steak, apple juice] on table - Tables{tableNumber=2, status='free'}. Added on: 15:00, 12.11.22
+Order 1: [awda, adw, ad, awwf] on table - Tables{tableNumber=1, status='free'}. Added on: 22, 22.22.22

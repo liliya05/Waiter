@@ -4,3 +4,33 @@
 4. cake, price: 6.0
 5. steak, price: 5.6
 6. soup, price: 4.7
+7. chicken nuggets, price: 5.4
+8. apple juice, price: 1.0
+9. cheesecake, price: 3.65
+10. cake, price: 6.0
+11. steak, price: 5.6
+12. soup, price: 4.7
+13. chicken nuggets, price: 5.4
+14. apple juice, price: 1.0
+15. cheesecake, price: 3.65
+16. cake, price: 6.0
+17. steak, price: 5.6
+18. soup, price: 4.7
+19. chicken nuggets, price: 5.4
+20. apple juice, price: 1.0
+21. cheesecake, price: 3.65
+22. cake, price: 6.0
+23. steak, price: 5.6
+24. soup, price: 4.7
+25. chicken nuggets, price: 5.4
+26. apple juice, price: 1.0
+27. cheesecake, price: 3.65
+28. cake, price: 6.0
+29. steak, price: 5.6
+30. soup, price: 4.7
+31. chicken nuggets, price: 5.4
+32. apple juice, price: 1.0
+33. cheesecake, price: 3.65
+34. cake, price: 6.0
+35. steak, price: 5.6
+36. soup, price: 4.7
