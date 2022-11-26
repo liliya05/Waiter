@@ -1,2 +1,2 @@
-Chef info: g, g
-Waiter info: g, g
+Chef info: г, g
+Waiter info: jj, y
