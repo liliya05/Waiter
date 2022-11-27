@@ -1,2 +1,2 @@
-Chef info: efg, dg
-Waiter info: dfg, asd
+Chef info: g, g
+Waiter info: g, g

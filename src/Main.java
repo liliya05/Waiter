@@ -173,20 +173,8 @@ public class Main {
         }
 
         public static void main (String[]args){
-            Scanner scan = new Scanner(System.in);
             loginUsers();
             ArrayList<String> menu = new ArrayList<>();
-            Waiter waiter = new Waiter();
-            Chef chef = new Chef();
-
-            // test
-            System.out.println(menu.toArray().length);
-
-            Tables table1 = new Tables();
-            Tables table2 = new Tables(1, "free");
-            Tables table3 = new Tables(2, "free");
-            ArrayList<String> mealsOrder = new ArrayList<>();
-
             chooseForWaiter(menu);
 
         }

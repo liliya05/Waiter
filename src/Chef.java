@@ -8,7 +8,6 @@ public class Chef extends User implements Preparation {
     public void cook(Order order) {
         if (order.status.equalsIgnoreCase("ordered")) {
             order.status = "cooking";
-            System.out.println();
         }
     }
 

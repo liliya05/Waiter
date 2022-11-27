@@ -1,2 +1,1 @@
 1. fish, price: 2.0
-2. pie, price: 4.0

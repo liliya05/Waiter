@@ -57,8 +57,7 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
         }
         if (order.status.equalsIgnoreCase("ordered")) {
             System.out.println("The order isn't ready yet.");
-        }
-        else if (order.table.status.equalsIgnoreCase("free")) {
+        } else if (order.table.status.equalsIgnoreCase("free")) {
             System.out.println("This table doesn't have an order yet.");
         }
     }
@@ -81,27 +80,30 @@ public class Waiter extends User implements Serveable, Payable, MenuManagement, 
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
                     lineNum++;
-                    if(line.contains(order.table) && order.table.equals("waiting for order to be served")) {
+                    if (line.contains(order.table) && order.table.equals("waiting for order to be served")) {
                         System.out.println("This table has already made an order!");
                         return;
                     }
                 }
-            } catch(FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
                 System.out.println(e);
             }
             FileWriter fStream = new FileWriter("orders.txt", true);
             BufferedWriter menuFile = new BufferedWriter(fStream);
-            for (String s : order.meals) {
-                if (menu.containsAll(order.meals) && order.table.status.equalsIgnoreCase("free")) {
-                    System.out.println("Order for table " + order.table.tableNumber + ": " + order.meals);
-                    order.table.status = "waiting for order to be served";
-                    menuFile.write("Order " + lines + ": " + order.meals + " on table " + order.table.tableNumber +
-                            ", status: " + order.table.status + "; Added on: " + order.time + ", " + order.date + "\n");
-                    menuFile.close();
+            for (String meal : order.meals) {
+                if (!menu.contains(meal)) {
+                    System.out.println(meal + " isn't on the menu.");
                 }
-                if (!menu.contains(s)) {
-                    System.out.println(s + " isn't on the menu.");
-                }
+            }
+            if (menu.containsAll(order.meals) && order.table.status.equalsIgnoreCase("free")) {
+                System.out.println("Order for table " + order.table.tableNumber + ": " + order.meals);
+                order.table.status = "waiting for order to be served";
+                menuFile.write("Order " + lines + ": " + order.meals + " on table " + order.table.tableNumber +
+                        ", status: " + order.table.status + "; Added on: " + order.time + ", " + order.date + "\n");
+                menuFile.close();
+            }
+            if (!order.table.status.equalsIgnoreCase("free")) {
+                System.out.println("This table already has an order.");
             }
         } catch (Exception e) {
             System.err.println("Error while writing to file: " +
