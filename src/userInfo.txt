@@ -1,2 +1,0 @@
-Chef info: Tosho, t1234
-Waiter info: Gosho, g1234
