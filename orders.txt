@@ -1,2 +1,0 @@
-Order 1: [fish] on table 1, status: waiting for order to be served; Added on: 1, 1
-Order 2: [fish] on table 1, status: waiting for order to be served; Added on: 1, 1

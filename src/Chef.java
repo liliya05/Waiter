@@ -1,25 +1,29 @@
-public class Chef extends User implements Preparation {
+public class Chef extends User implements Cookable{
+    protected String userName;
+    protected String userPassword;
 
     Chef() {
+        this.userName = null;
+        this.userPassword = null;
+    }
+
+    Chef(String userName, String userPassword) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+    }
+
+    @Override
+    void switchRoles(int ans) {
 
     }
 
     @Override
-    public void cook(Order order) {
-        if (order.status.equalsIgnoreCase("ordered")) {
-            order.status = "cooking";
-        }
+    public void cook() {
+
     }
 
     @Override
-    public void finishCooking(Order order) {
-        if (order.status.equalsIgnoreCase("cooking")) {
-            order.status = "cooked";
-        }
-    }
-
-    @Override
-    void switchRoles() {
+    public void finishCooking() {
 
     }
 }

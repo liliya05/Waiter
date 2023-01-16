@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
 public interface MenuManagement {
-    void addToTheMenu(ArrayList<String> menu, String meal, double price);
+    void addToTheMenu(ArrayList<Meal> menu);
     void removeFromTheMenu(ArrayList<String> menu, int index);
 }

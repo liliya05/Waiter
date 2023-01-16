@@ -22,29 +22,50 @@ public class Login {
 
     Scanner read = new Scanner(System.in);
 
-    public void loginChef() {
+    public void loginChef(Chef chef, String userName, String userPassword) {
         System.out.println("Login for chef -");
         // Ask for info
         System.out.print("Enter your name: ");
-        String userName = read.next();
+        userName = read.next();
         System.out.print("Enter your password: ");
-        String userPassword = read.next();
+        userPassword = read.next();
 
-        // Write info in text file
-        fileWriter.println("Chef info: " + userName + ", " + userPassword);
-
+        if (chef.userName.equals(userName) && chef.userPassword.equals(userPassword)) {
+            // Write info in text file
+            fileWriter.println("Chef info: " + userName + ", " + userPassword);
+        }
+        else {
+            while (!chef.userName.equals(userName) || !chef.userPassword.equals(userPassword)) {
+                System.out.println("Wrong username or password.");
+                System.out.print("Enter your name: ");
+                userName = read.next();
+                System.out.print("Enter your password: ");
+                userPassword = read.next();
+            }
+        }
     }
 
-    public void loginWaiter() {
+    public void loginWaiter(Waiter waiter, String userName, String userPassword) {
         System.out.println("Login for waiter -");
         // Ask for info
         System.out.print("Enter your name: ");
-        String userName = read.next();
+        userName = read.next();
         System.out.print("Enter your password: ");
-        String userPassword = read.next();
+        userPassword = read.next();
 
         // Write info in text file
-        fileWriter.println("Waiter info: " + userName + ", " + userPassword);
+        if (waiter.userName.equals(userName) && waiter.userPassword.equals(userPassword)) {
+            fileWriter.println("Waiter info: " + userName + ", " + userPassword);
+        }
+        else {
+            while (!waiter.userName.equals(userName) || !waiter.userPassword.equals(userPassword)) {
+                System.out.println("Wrong username or password.");
+                System.out.print("Enter your name: ");
+                userName = read.next();
+                System.out.print("Enter your password: ");
+                userPassword = read.next();
+            }
+        }
         fileWriter.close();
     }
 }

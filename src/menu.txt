@@ -1,0 +1,7 @@
+Meal{name='fish', price=3.4}
+Meal{name='steak', price=6.1}
+Meal{name='water', price=1.9}
+Meal{name='juice', price=2.0}
+Meal{name='cake', price=4.2}
+Meal{name='ribs', price=2.3}
+Meal{name='coke', price=1.9}

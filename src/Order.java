@@ -4,10 +4,18 @@ public class Order {
     public String date;
     public String time;
     public Tables table;
-    public ArrayList<String> meals;
+    public ArrayList<Meal> meals;
     public String status;
 
-    Order(String date, String time, Tables table, ArrayList<String> meals, String status) {
+    Order() {
+        this.date = null;
+        this.time = null;
+        this.table = null;
+        this.meals = null;
+        this.status = null;
+    }
+
+    Order(String date, String time, Tables table, ArrayList<Meal> meals, String status) {
         this.date = date;
         this.time = time;
         this.table = table;
@@ -24,6 +32,5 @@ public class Order {
                 ", meals=" + meals +
                 ", status='" + status + '\'' +
                 '}';
-
     }
 }

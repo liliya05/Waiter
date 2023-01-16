@@ -1,3 +1,4 @@
 abstract class User {
-    abstract void switchRoles();
+    abstract void switchRoles(int ans);
 }
+

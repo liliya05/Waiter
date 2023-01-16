@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
 public interface Orderable {
-    void makeAnOrder(ArrayList<String> menu, Order order);
+    void writeOrders(ArrayList<Meal> menu, ArrayList<Order> orders);
     void changeTheOrder();
 }
